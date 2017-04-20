@@ -1,9 +1,14 @@
-# api documentation for  [koa-compose (v3.2.1)](https://github.com/koajs/compose#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-koa-compose.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-koa-compose) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-koa-compose.svg)](https://travis-ci.org/npmdoc/node-npmdoc-koa-compose)
+# npmdoc-koa-compose
+
+#### api documentation for  koa-compose (v4.0.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-koa-compose.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-koa-compose) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-koa-compose.svg)](https://travis-ci.org/npmdoc/node-npmdoc-koa-compose)
+
 #### compose Koa middleware
 
-[![NPM](https://nodei.co/npm/koa-compose.png?downloads=true)](https://www.npmjs.com/package/koa-compose)
+[![NPM](https://nodei.co/npm/koa-compose.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/koa-compose)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-koa-compose/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-koa-compose_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-koa-compose/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-koa-compose/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-koa-compose/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-koa-compose/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-koa-compose/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-koa-compose/build/screenCapture.npmPackageListing.svg)
 
@@ -16,88 +21,25 @@
 ```json
 
 {
-    "bugs": {
-        "url": "https://github.com/koajs/compose/issues"
-    },
-    "dependencies": {
-        "any-promise": "^1.1.0"
-    },
+    "name": "koa-compose",
     "description": "compose Koa middleware",
-    "devDependencies": {
-        "co": "^4.6.0",
-        "istanbul": "^0.4.2",
-        "matcha": "^0.7.0",
-        "mocha": "^3.1.2",
-        "should": "^2.0.0",
-        "standard": "^8.4.0"
-    },
-    "directories": {},
-    "dist": {
-        "shasum": "a85ccb40b7d986d8e5a345b3a1ace8eabcf54de7",
-        "tarball": "https://registry.npmjs.org/koa-compose/-/koa-compose-3.2.1.tgz"
-    },
-    "files": [
-        "index.js"
-    ],
-    "gitHead": "9fd370a88ab552f001f2af80e06afced123a4954",
-    "homepage": "https://github.com/koajs/compose#readme",
+    "repository": "koajs/compose",
+    "version": "4.0.0",
     "keywords": [
         "koa",
         "middleware",
         "compose"
     ],
-    "license": "MIT",
-    "maintainers": [
-        {
-            "name": "aheckmann",
-            "email": "aaron.heckmann+github@gmail.com"
-        },
-        {
-            "name": "coderhaoxin",
-            "email": "coderhaoxin@outlook.com"
-        },
-        {
-            "name": "dead_horse",
-            "email": "dead_horse@qq.com"
-        },
-        {
-            "name": "eivifj",
-            "email": "eivind.fjeldstad@gmail.com"
-        },
-        {
-            "name": "fengmk2",
-            "email": "fengmk2@gmail.com"
-        },
-        {
-            "name": "jongleberry",
-            "email": "jonathanrichardong@gmail.com"
-        },
-        {
-            "name": "juliangruber",
-            "email": "julian@juliangruber.com"
-        },
-        {
-            "name": "stephenmathieson",
-            "email": "me@stephenmathieson.com"
-        },
-        {
-            "name": "tejasmanohar",
-            "email": "me@tejas.io"
-        },
-        {
-            "name": "tjholowaychuk",
-            "email": "tj@vision-media.ca"
-        }
+    "files": [
+        "index.js"
     ],
-    "name": "koa-compose",
-    "optionalDependencies": {},
-    "publishConfig": {
-        "tag": "next"
-    },
-    "readme": "ERROR: No README data found!",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/koajs/compose.git"
+    "dependencies": {},
+    "devDependencies": {
+        "istanbul": "^0.4.2",
+        "matcha": "^0.7.0",
+        "mocha": "^3.1.2",
+        "should": "^2.0.0",
+        "standard": "^9.0.1"
     },
     "scripts": {
         "bench": "matcha bench/bench.js",
@@ -106,19 +48,9 @@
         "test-cov": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
         "test-travis": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
     },
-    "version": "3.2.1"
+    "license": "MIT"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module koa-compose](#apidoc.module.koa-compose)
-
-
-
-# <a name="apidoc.module.koa-compose"></a>[module koa-compose](#apidoc.module.koa-compose)
 
 
 
