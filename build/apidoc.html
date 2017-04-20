@@ -49,9 +49,7 @@
 <h1>api documentation for
     <a
 
-        href="https://github.com/koajs/compose#readme"
-
-    >koa-compose (v3.2.1)</a>
+    >koa-compose (v4.0.0)</a>
 </h1>
 <h4>compose Koa middleware</h4>
 <div class="apidocSectionDiv"><a
@@ -61,12 +59,65 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.koa-compose">module koa-compose</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.koa-compose.koa-compose">
+            function <span class="apidocSignatureSpan"></span>koa-compose
+            <span class="apidocSignatureSpan">(middleware)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.koa-compose" id="apidoc.module.koa-compose">module koa-compose</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.koa-compose.koa-compose" id="apidoc.element.koa-compose.koa-compose">
+        function <span class="apidocSignatureSpan"></span>koa-compose
+        <span class="apidocSignatureSpan">(middleware)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function compose(middleware) {
+  if (!Array.isArray(middleware)) throw new TypeError(&#x27;Middleware stack must be an array!&#x27;)
+  for (const fn of middleware) {
+    if (typeof fn !== &#x27;function&#x27;) throw new TypeError(&#x27;Middleware must be composed of functions!&#x27;)
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * @param {Object} context
+   * @return {Promise}
+   * @api public
+   */
+</span>
+  return function (context, next) {
+    // last called middleware #
+    let index = -1
+    return dispatch(0)
+    function dispatch (i) {
+      if (i &#x3c;= index) return Promise.reject(new Error(&#x27;next() called multiple times&#x27;))
+      index = i
+      let fn = middleware[i]
+      if (i === middleware.length) fn = next
+      if (!fn) return Promise.resolve()
+      try {
+        return Promise.resolve(fn(context, function next () {
+          return dispatch(i + 1)
+        }))
+      } catch (err) {
+        return Promise.reject(err)
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 

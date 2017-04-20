@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,15 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-    >koa-compose (v4.0.0)</a>
+    <a>koa-compose (v4.0.0)</a>
 </h1>
 <h4>compose Koa middleware</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.koa-compose">module koa-compose</a><ol>
 
@@ -84,9 +79,9 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function compose(middleware) {
-  if (!Array.isArray(middleware)) throw new TypeError(&#x27;Middleware stack must be an array!&#x27;)
+  if (!Array.isArray(middleware)) throw new TypeError('Middleware stack must be an array!')
   for (const fn of middleware) {
-    if (typeof fn !== &#x27;function&#x27;) throw new TypeError(&#x27;Middleware must be composed of functions!&#x27;)
+    if (typeof fn !== 'function') throw new TypeError('Middleware must be composed of functions!')
   }
 
 <span class="apidocCodeCommentSpan">  /**
@@ -100,7 +95,7 @@
     let index = -1
     return dispatch(0)
     function dispatch (i) {
-      if (i &#x3c;= index) return Promise.reject(new Error(&#x27;next() called multiple times&#x27;))
+      if (i &lt;= index) return Promise.reject(new Error('next() called multiple times'))
       index = i
       let fn = middleware[i]
       if (i === middleware.length) fn = next
@@ -127,3 +122,4 @@
     ]
 </div>
 </div>
+</body></html>
